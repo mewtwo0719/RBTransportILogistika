@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./assets/global.css" rel="stylesheet" />
+    <link href="./assets/custom.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans">
+    <div class="w-full">
+      <!-- Navbar -->
+      <nav
+        class="sticky top-0 z-50 bg-[color:var(--rich-black)] shadow-md px-2"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <div
+              class="flex-shrink-0 text-xl font-bold text-[color:var(--sunset)] flex justify-center items-center"
+            >
+              <img src="./assets/images/logo.png" height="60" width="60" />
+              <div class="flex flex-col sm:flex-row">
+                Transport i &nbsp;
+                <div class="">logistika</div>
+              </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+              <a
+                href="#"
+                class="text-[color:var(--lion)] hover:text-[color:var(--sunset)]"
+                >Početna</a
+              >
+              <a
+                href="#about"
+                class="text-[color:var(--lion)] hover:text-[color:var(--sunset)]"
+                >O nama</a
+              >
+              <a
+                href="#services"
+                class="text-[color:var(--lion)] hover:text-[color:var(--sunset)]"
+                >Usluge</a
+              >
+              <a
+                href="#contact"
+                class="text-[color:var(--lion)] hover:text-[color:var(--sunset)]"
+                >Kontakt</a
+              >
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="md:hidden">
+              <button
+                id="menu-btn"
+                class="relative w-5 h-4.5 flex flex-col justify-between items-center cursor-pointer"
+              >
+                <span
+                  class="block w-5 h-0.5 bg-[color:var(--lion)] transform transition duration-300"
+                ></span>
+                <span
+                  class="block w-5 h-0.5 bg-[color:var(--lion)] transform transition duration-300"
+                ></span>
+                <span
+                  class="block w-5 h-0.5 bg-[color:var(--lion)] transform transition duration-300"
+                ></span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div
+          id="mobile-menu"
+          class="hidden absolute top-16 left-0 w-full shadow-md md:hidden"
+        >
+          <div class="flex flex-col bg-[color:var(--rich-black)] px-3 pb-5">
+            <a
+              href="#"
+              class="block px-4 py-3 text-[color:var(--lion)] hover:text-[color:var(--sunset)]"
+              >Početna</a
+            >
+            <a
+              href="#about"
+              class="block px-4 py-3 text-[color:var(--lion)] hover:text-[color:var(--sunset)]"
+              >O nama</a
+            >
+            <a
+              href="#services"
+              class="block px-4 py-3 text-[color:var(--lion)] hover:text-[color:var(--sunset)]"
+              >Usluge</a
+            >
+            <a
+              href="#contact"
+              class="block px-4 py-3 text-[color:var(--lion)] hover:text-[color:var(--sunset)]"
+              >Kontakt</a
+            >
+          </div>
+        </div>
+      </nav>
+
+      <!-- Sections -->
+      <section
+        id="hero"
+        class="h-[calc(100vh-64px)] relative hero flex flex-col justify-start items-center text-center"
+      >
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 mt-[30vh] animate-pop-up">
+          <h1
+            class="text-6xl font-extrabold mb-4 bg-gradient-to-r from-[color:var(--sunset)] to-[color:var(--lion)] bg-clip-text text-transparent"
+          >
+            Kombi transport i logistika
+          </h1>
+          <p
+            class="text-2xl font-bold mb-8 bg-gradient-to-r from-[color:var(--sunset)] to-[color:var(--lion)] bg-clip-text text-transparent"
+          >
+            Sigurno. Pouzdano. Odgovorno.
+          </p>
+        </div>
+
+        <!-- Scroll Button -->
+        <button
+          onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' })"
+          class="animate-bounce mt-auto mb-20 z-10 px-6 py-3 rounded-full border-2 border-[color:var(--sunset)] text-[color:var(--sunset)] font-semibold hover:bg-[color:var(--sunset)] hover:text-[color:var(--rich-black)] transition"
+        >
+          ↓
+        </button>
+      </section>
+
+      <section
+        id="about"
+        class="min-h-screen flex flex-col text-white px-6 py-32 bg-gradient-dark items-center"
+      >
+        <div class="max-w-7xl">
+          <!-- Title -->
+          <h2
+            class="text-4xl font-extrabold mb-12 inline-block bg-gradient-to-r from-[color:var(--sunset)] to-[color:var(--lion)] bg-clip-text text-transparent"
+          >
+            O Nama
+            <span
+              class="bg-gradient-to-r from-[color:var(--sunset)] to-[color:var(--lion)] rounded-full h-1 block mt-2"
+            ></span>
+          </h2>
+
+          <!-- Content Row -->
+          <div class="flex flex-col md:flex-row items-center gap-12 w-full">
+            <!-- Left Box -->
+            <div
+              class="flex-1 border-8 border-[color:var(--sunset)] rounded-lg p-8 flex items-center justify-center"
+            >
+              <div
+                class="text-2xl font-bold text-[color:var(--sunset)] gap-4 flex flex-col"
+              >
+                <p class="text-3xl">
+                  Dobrodošli na zvaničnu stranicu firme "РБ Transport i
+                  Logistika".
+                </p>
+                <ul
+                  class="list-disc list-inside space-y-4 text-2xl text-[color:var(--sunset)]"
+                >
+                  <li>
+                    Specijalizovani smo za kombi prevoz robe na području -
+                    Mrkonjić-Grada, Banja Luke, Šipova, Jajca te Ključa.
+                  </li>
+                  <li>
+                    Zahvaljujući našem iskustvu i posvećenosti, uspješno smo
+                    izgradili povjerenje velikog broja klijenata koji nam se
+                    vraćaju.
+                  </li>
+                  <li>
+                    Naš cilj je da vaša pošiljka stigne brzo, sigurno i povoljno
+                    na odredište, a vaše zadovoljstvo je naša najveća preporuka.
+                  </li>
+                  <li>
+                    Naš veliki broj zadovoljnih klijenata potvrđuje pouzdanost i
+                    kvalitet naših usluga.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Item List -->
+
+            <div class="space-y-4 text-4xl text-[color:var(--sunset)] pl-12">
+              <!-- Item -->
+              <div class="flex items-center gap-3 text-[color:var(--sunset)]">
+                <span
+                  class="w-12 h-12 border-2 text-[color:var(--sunset)] border-[color:var(--sunset)] rounded-full flex-shrink-0 flex items-center justify-center"
+                >
+                  ✓
+                </span>
+                <span class="font-semibold">Brza dostava</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-12 h-12 border-2 text-[color:var(--sunset)] border-[color:var(--sunset)] rounded-full flex-shrink-0 flex items-center justify-center"
+                >
+                  ✓
+                </span>
+                <span class="font-semibold">Kvalitetna usluga</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-12 h-12 border-2 text-[color:var(--sunset)] border-[color:var(--sunset)] rounded-full flex-shrink-0 flex items-center justify-center"
+                >
+                  ✓
+                </span>
+                <span class="font-semibold">Pouzdan tim</span>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-12 h-12 text-[color:var(--sunset)] border-2 border-[color:var(--sunset)] rounded-full flex-shrink-0 flex items-center justify-center"
+                >
+                  ✓
+                </span>
+                <span class="font-semibold">Podrška 24/7</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-12 h-12 text-[color:var(--sunset)] border-2 border-[color:var(--sunset)] rounded-full flex-shrink-0 flex items-center justify-center"
+                >
+                  ✓
+                </span>
+                <span class="font-semibold">Povoljne cijene</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-12 h-12 text-[color:var(--sunset)] border-2 border-[color:var(--sunset)] rounded-full flex-shrink-0 flex items-center justify-center"
+                >
+                  ✓
+                </span>
+                <span class="font-semibold">Zadovoljni klijenti</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="services"
+        class="min-h-screen bg-gradient-dark-reverse flex flex-col items-center px-6 py-32"
+      >
+        <div class="max-w-7xl w-full">
+          <!-- Title -->
+          <h2
+            class="text-4xl font-extrabold mb-12 inline-block bg-gradient-to-r from-[color:var(--sunset)] to-[color:var(--lion)] bg-clip-text text-transparent"
+          >
+            Naše usluge
+            <span
+              class="bg-gradient-to-r from-[color:var(--sunset)] to-[color:var(--lion)] rounded-full h-1 block mt-2"
+            ></span>
+          </h2>
+
+          <!-- Services Grid -->
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-x-24 gap-y-8 min-h-[calc(50vh-16px)]"
+          >
+            <!-- Box 1 -->
+            <div
+              class="py-16 px-4 rounded-lg flex flex-col items-center justify-center font-extrabold text-4xl text-[color:var(--lion)] bg-gradient-dark cursor-pointer hover:scale-105 transition transform h-full"
+              onclick="openModal('service1')"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                height="128"
+                width="128"
+              >
+                <!--!Font Awesome Free v7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                <path
+                  d="M560.3 301.2C570.7 313 588.6 315.6 602.1 306.7C616.8 296.9 620.8 277 611 262.3L563 190.3C560.2 186.1 556.4 182.6 551.9 180.1L351.4 68.7C332.1 58 308.6 58 289.2 68.7L88.8 180C83.4 183 79.1 187.4 76.2 192.8L27.7 282.7C15.1 306.1 23.9 335.2 47.3 347.8L80.3 365.5L80.3 418.8C80.3 441.8 92.7 463.1 112.7 474.5L288.7 574.2C308.3 585.3 332.2 585.3 351.8 574.2L527.8 474.5C547.9 463.1 560.2 441.9 560.2 418.8L560.2 301.3zM320.3 291.4L170.2 208L320.3 124.6L470.4 208L320.3 291.4zM278.8 341.6L257.5 387.8L91.7 299L117.1 251.8L278.8 341.6z"
+                  fill="#b28d5f"
+                />
+              </svg>
+              Paketske usluge
+            </div>
+
+            <!-- Box 2 -->
+            <div
+              class="py-16 px-4 rounded-lg flex flex-col items-center justify-center font-extrabold text-4xl text-[color:var(--lion)] bg-gradient-dark cursor-pointer hover:scale-105 transition transform h-full"
+              onclick="openModal('service2')"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                height="128"
+                width="128"
+              >
+                <path
+                  d="M32 160C32 124.7 60.7 96 96 96L480 96C515.3 96 544 124.7 544 160L544 416L608 416C625.7 416 640 430.3 640 448C640 465.7 625.7 480 608 480L311.6 480C311.8 482.6 312 485.3 312 488C312 536.6 272.6 576 224 576C175.4 576 136 536.6 136 488C136 485.3 136.1 482.6 136.4 480L96 480C60.7 480 32 451.3 32 416L32 160zM440 176C426.7 176 416 186.7 416 200L416 360C416 373.3 426.7 384 440 384C453.3 384 464 373.3 464 360L464 200C464 186.7 453.3 176 440 176zM112 200L112 360C112 373.3 122.7 384 136 384C149.3 384 160 373.3 160 360L160 200C160 186.7 149.3 176 136 176C122.7 176 112 186.7 112 200zM288 176C274.7 176 264 186.7 264 200L264 360C264 373.3 274.7 384 288 384C301.3 384 312 373.3 312 360L312 200C312 186.7 301.3 176 288 176zM264 488C264 465.9 246.1 448 224 448C201.9 448 184 465.9 184 488C184 510.1 201.9 528 224 528C246.1 528 264 510.1 264 488z"
+                  fill="#b28d5f"
+                />
+              </svg>
+
+              Prevoz prikolicom
+            </div>
+            <!-- Box 3 -->
+            <div
+              class="py-16 px-4 rounded-lg flex flex-col items-center justify-center font-extrabold text-4xl text-[color:var(--lion)] bg-gradient-dark cursor-pointer hover:scale-105 transition transform h-full"
+              onclick="openModal('service3')"
+            >
+              <svg viewBox="0 0 640 640" height="128" width="128">
+                <path
+                  d="M64 160C64 124.7 92.7 96 128 96L416 96C451.3 96 480 124.7 480 160L480 192L530.7 192C547.7 192 564 198.7 576 210.7L621.3 256C633.3 268 640 284.3 640 301.3L640 448C640 483.3 611.3 512 576 512L572.7 512C562.3 548.9 528.3 576 488 576C447.7 576 413.8 548.9 403.3 512L300.7 512C290.3 548.9 256.3 576 216 576C175.7 576 141.8 548.9 131.3 512L128 512C92.7 512 64 483.3 64 448L64 400L24 400C10.7 400 0 389.3 0 376C0 362.7 10.7 352 24 352L136 352C149.3 352 160 341.3 160 328C160 314.7 149.3 304 136 304L24 304C10.7 304 0 293.3 0 280C0 266.7 10.7 256 24 256L200 256C213.3 256 224 245.3 224 232C224 218.7 213.3 208 200 208L24 208C10.7 208 0 197.3 0 184C0 170.7 10.7 160 24 160L64 160zM576 352L576 301.3L530.7 256L480 256L480 352L576 352zM256 488C256 465.9 238.1 448 216 448C193.9 448 176 465.9 176 488C176 510.1 193.9 528 216 528C238.1 528 256 510.1 256 488zM488 528C510.1 528 528 510.1 528 488C528 465.9 510.1 448 488 448C465.9 448 448 465.9 448 488C448 510.1 465.9 528 488 528z"
+                  fill="#b28d5f"
+                />
+              </svg>
+
+              Ekspres usluge
+            </div>
+            <!-- Box 4 -->
+            <div
+              class="py-16 px-4 rounded-lg flex flex-col items-center justify-center font-extrabold text-4xl text-[color:var(--lion)] bg-gradient-dark cursor-pointer hover:scale-105 transition transform h-full"
+              onclick="openModal('service4')"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                height="128"
+                width="128"
+              >
+                <path
+                  d="M432 96C387.8 96 352 131.8 352 176L352 424.2L54.8 513.4C37.9 518.4 28.3 536.3 33.4 553.2C38.5 570.1 56.3 579.7 73.2 574.7L388.7 480.1L432.4 480.1C432.2 482.7 432 485.4 432 488.1C432 536.7 471.4 576.1 520 576.1C568.6 576.1 608 536.7 608 488.1L608 96.1L432 96.1zM560 488C560 510.1 542.1 528 520 528C497.9 528 480 510.1 480 488C480 465.9 497.9 448 520 448C542.1 448 559.9 465.9 560 487.9L560 488zM83.9 213.5C50.1 223.8 31.1 259.6 41.4 293.4L69.5 385.2C79.8 419 115.6 438 149.4 427.7L241.2 399.6C275 389.3 294 353.5 283.7 319.7L255.6 227.9C245.3 194.1 209.5 175.1 175.7 185.4L83.9 213.5z"
+                  fill="#b28d5f"
+                />
+              </svg>
+              Transportna kolica
+            </div>
+          </div>
+        </div>
+
+        <!-- Modals -->
+        <div
+          id="modal-container"
+          class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50"
+        >
+          <div
+            class="bg-[color:var(--rich-black)] rounded-lg p-6 w-full max-w-lg sm:max-w-[50vw] sm:h-[50vh] relative border-2 border-[color:var(--sunset)] text-[color:var(--sunset)] overflow-y-auto"
+          >
+            <!-- Close button -->
+            <button
+              class="absolute top-4 right-4 text-[color:var(--sunset)] text-6xl font-bold hover:opacity-80 cursor-pointer"
+              onclick="closeModal()"
+            >
+              &times;
+            </button>
+
+            <!-- Title -->
+            <h3 id="modal-title" class="text-4xl font-bold mb-4"></h3>
+
+            <!-- Description -->
+            <p
+              id="modal-description"
+              class="text-lg sm:text-xl leading-relaxed"
+            ></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="bg-gradient-light" id="contact">
+        <svg
+          width="100%"
+          height="100%"
+          id="svg"
+          viewBox="0 0 1440 390"
+          xmlns="http://www.w3.org/2000/svg"
+          class="transition duration-300 ease-in-out delay-150"
+        >
+          <defs>
+            <linearGradient id="gradient" x1="35%" y1="2%" x2="65%" y2="98%">
+              <stop offset="5%" stop-color="#021a2b"></stop>
+              <stop offset="95%" stop-color="#063547"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            d="M 0,400 L 0,150 C 58.098935073857774,159.79319821367227 116.19787014771555,169.58639642734457 191,165 C 265.80212985228445,160.41360357265543 357.3074544829956,141.44761250429406 437,154 C 516.6925455170044,166.55238749570594 584.5723119203024,210.6231535554792 636,212 C 687.4276880796976,213.3768464445208 722.4032978357951,172.05977327378906 785,140 C 847.5967021642049,107.94022672621092 937.8144967365167,85.13775334936447 1012,104 C 1086.1855032634833,122.86224665063553 1144.338715218138,183.38921332875302 1213,198 C 1281.661284781862,212.61078667124698 1360.830642390931,181.30539333562348 1440,150 L 1440,400 L 0,400 Z"
+            stroke="none"
+            stroke-width="0"
+            fill="url(#gradient)"
+            fill-opacity="1"
+            class="transition-all duration-300 ease-in-out delay-150 path-0"
+            transform="rotate(-180 720 200)"
+          ></path>
+        </svg>
+
+        <!-- Footer Content -->
+        <div
+          class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10"
+        >
+          <!-- Column 1: Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Gradovi</h3>
+            <ul class="space-y-2">
+              <li><a class="hover:underline">Banja Luka</a></li>
+              <li><a class="hover:underline">Jajce</a></li>
+              <li><a class="hover:underline">Ključ</a></li>
+              <li><a class="hover:underline">Mrkonjić Grad</a></li>
+              <li><a class="hover:underline">Šipovo</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Contact Info -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">Kontaktirajte Nas</h3>
+            <p>
+              Email:
+              <a href="mailto:bojanicr@hotmail.com" class="hover:underline"
+                >bojanicr@hotmail.com</a
+              >
+            </p>
+            <p>
+              Mobitel:
+              <a href="tel:+123456789" class="hover:underline"
+                >+387 65 972 422</a
+              >
+            </p>
+            <p>
+              Viber:
+              <a href="viber://chat?number=%2B123456789" class="hover:underline"
+                >+387 65 972 422</a
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Sticky Call Button -->
+      <button
+        id="callButton"
+        onclick="window.location.href='tel:+38765972422'"
+        class="hidden fixed bottom-6 right-6 bg-[color:var(--prussian-blue)] text-[color:var(--lion)] p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50 cursor-pointer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 640"
+          width="32"
+          heigh="32"
+        >
+          <path
+            fill="#b28d5f"
+            d="M224.2 89C216.3 70.1 195.7 60.1 176.1 65.4L170.6 66.9C106 84.5 50.8 147.1 66.9 223.3C104 398.3 241.7 536 416.7 573.1C493 589.3 555.5 534 573.1 469.4L574.6 463.9C580 444.2 569.9 423.6 551.1 415.8L453.8 375.3C437.3 368.4 418.2 373.2 406.8 387.1L368.2 434.3C297.9 399.4 241.3 341 208.8 269.3L253 233.3C266.9 222 271.6 202.9 264.8 186.3L224.2 89z"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- Script -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const bars = menuBtn.querySelectorAll("span");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+
+        // animate bars into X
+        bars[0].classList.toggle("rotate-45");
+        bars[0].classList.toggle("translate-y-2");
+
+        bars[1].classList.toggle("opacity-0");
+
+        bars[2].classList.toggle("-rotate-45");
+        bars[2].classList.toggle("-translate-y-2");
+      });
+
+      // Close menu when clicking a link
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          // reset hamburger
+          bars[0].classList.remove("rotate-45", "translate-y-2");
+          bars[1].classList.remove("opacity-0");
+          bars[2].classList.remove("-rotate-45", "-translate-y-2");
+        });
+      });
+    </script>
+
+    <script>
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Remove active class from all links
+              navLinks.forEach((link) => link.classList.remove("active-link"));
+              // Find the link that matches the section
+              const activeLink = document.querySelector(
+                `nav a[href="#${entry.target.id}"]`
+              );
+              if (activeLink) {
+                activeLink.classList.add("active-link");
+              }
+            }
+          });
+        },
+        {
+          threshold: 0.6, // Section must be at least 60% visible
+        }
+      );
+
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+
+    <script>
+      const services = {
+        service1: {
+          title: "Paketske usluge",
+          description: `Specijalizovani smo za brzi kombi prevoz paketa svih veličina.
+Svaka pošiljka se pažljivo obrađuje i pravilno utovara kako bi stigla na odredište bez oštećenja.
+Nudimo fleksibilne termine dostave prema potrebama klijenata i pravovremeno obavještavamo o statusu pošiljke. 
+Bez obzira na veličinu ili količinu, vaša roba stiže sigurno, brzo i pouzdano.`,
+        },
+        service2: {
+          title: "Prevoz prikolicom",
+          description: `Pružamo ekspres dostavu za pošiljke koje zahtijevaju hitan transport.
+Bilo da je riječ o istom danu ili narednom danu, naš tim je uvijek spreman da reaguje brzo i organizuje prevoz bez kašnjenja. 
+Vaša roba je u sigurnim rukama, a svi transporti se obavljaju prema vašim potrebama i prema vašem vremenu.
+ Ekspres usluge su idealne za hitne pošiljke i situacije kada je brzina prioritet.`,
+        },
+        service3: {
+          title: "Ekspres usluge",
+          description: `Ova sekcija pokriva sve usluge kombi transporta i logistike za manje i srednje pošiljke. Pružamo siguran i pouzdan prevoz robe, od manjih paketa do paleta, sa naglaskom na pravilno rukovanje i zaštitu prilikom transporta. Svaka pošiljka je praćena i pažljivo organizovana kako bi stigla bez oštećenja i na vrijeme. Sa nama je vaša roba u sigurnim rukama, a fleksibilnost i profesionalnost su standard`,
+        },
+        service4: {
+          title: "Transportna kolica",
+          description: `Nudimo prevoz robe uz dodatni prostor zahvaljujući prikolicama, što omogućava transport većih količina ili teže robe koja ne stane u standardni kombi. Prikolice su sigurno pričvršćene i opremljene kako bi se spriječilo pomjeranje ili oštećenje tereta tokom vožnje. Naši vozači su stručni u pravilnom utovaru i rasporedu tereta, kako bi svaki transport protekao bez problema. Fleksibilno prilagođavamo kapacitet prikolice prema potrebama klijenata. Pružamo i opcije ekspres dostave i diskretnog transporta, a tokom cijelog procesa pratimo pošiljku i pravovremeno vas obavještavamo. Sa nama je svaki transport prikolicom siguran, brz i pouzdan – vaša roba stiže na odredište neoštećena i na vrijeme`,
+        },
+      };
+
+      function openModal(service) {
+        const modal = document.getElementById("modal-container");
+        const title = document.getElementById("modal-title");
+        const desc = document.getElementById("modal-description");
+
+        title.textContent = services[service].title;
+        desc.textContent = services[service].description;
+
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("modal-container");
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+      }
+    </script>
+
+    <script>
+      // Show sticky call button when scrolled near bottom
+      window.addEventListener("scroll", () => {
+        const callBtn = document.getElementById("callButton");
+        if (
+          window.innerHeight + window.scrollY >=
+          document.body.offsetHeight - 200
+        ) {
+          callBtn.classList.remove("hidden");
+        } else {
+          callBtn.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
